@@ -1,0 +1,34 @@
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url:  jdbc:mysql://127.0.0.1:3306/springboot_test
+  username:  root
+  password:  root
+
+#集合等
+spring:
+   #指定连接池参数
+  datasource:
+    url:  jdbc:mysql://127.0.0.1:3306/springboot_test
+    username:  root
+    password:  root
+    driver-class-name:  com.mysql.jdbc.Driver
+  #Redis
+  redis:
+    host: localhost
+    port: 6379
+
+logging:
+  level:
+    com.itheima: debug
+    org.springframe: info
+
+server:
+  port: 8888
+mybatis:
+  #实体类别名包路径
+  type-aliases-package: com.itheima.poji
+  #映射文件路径
+  #mapper-locations: classpath:mapper/*.xml
+  configuration:
+    #控制台输出执行的SQL语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
